@@ -1,0 +1,8 @@
+prefix=/home/jorge/Documents/robotica_tiago/turtlebot_control_pack/devel
+
+Name: field_pid_turtle
+Description: Description of field_pid_turtle
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

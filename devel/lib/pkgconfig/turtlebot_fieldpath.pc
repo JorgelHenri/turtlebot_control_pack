@@ -1,0 +1,8 @@
+prefix=/home/jorge/Documents/robotica_tiago/turtlebot_control_pack/devel
+
+Name: turtlebot_fieldpath
+Description: Description of turtlebot_fieldpath
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
