@@ -8,13 +8,15 @@ ISE, Indiana University
 #include "ros/ros.h"
 #include <tf/transform_listener.h>
 #include <nav_msgs/Odometry.h>
+#include "geometry_msgs/PoseWithCovarianceStamped.h"
+#include "geometry_msgs/TwistWithCovarianceStamped.h"
 #include <visualization_msgs/Marker.h>
 #include <std_srvs/Empty.h>
 #include <sstream>
 #include <fstream>
 #include <iostream>
 #include "geometry.h"
-#include "pid.h"
+#include "pid.h" 
 
 
 // global vars
@@ -28,6 +30,7 @@ ros::Publisher marker_pub;
 
 // ROS Topic Subscribers
 ros::Subscriber odom_sub;
+ros::Subscriber odom_subT;
 
 
 //Global variables for PID
@@ -43,23 +46,23 @@ double getDistance(Point &p1, Point &p2);
 /*
  * Callback function for odometry msg, used for odom subscriber
  */
-void odomCallback(const nav_msgs::Odometry odom_msg) {
+void odomCallback(const geometry_msgs::PoseWithCovarianceStamped odom_msg) {
     /* upon "hearing" odom msg, retrieve its position and orientation (yaw) information.
      * tf utility functions can be found here: http://docs.ros.org/diamondback/api/tf/html/c++/namespacetf.html
      * odom data structure definition is here: https://mirror.umd.edu/roswiki/doc/diamondback/api/nav_msgs/html/msg/Odometry.html
      */
     tf::pointMsgToTF(odom_msg.pose.pose.position, Odom_pos);
     Odom_yaw = tf::getYaw(odom_msg.pose.pose.orientation);
+}
 
+void odomTCallback(const nav_msgs::Odometry odom_msg) {
     //update observed linear and angular speeds (real speeds published from simulation)
     Odom_v = odom_msg.twist.twist.linear.x;
     Odom_w = odom_msg.twist.twist.angular.z;
+        //display on terminal screen
+    // ROS_INFO("Position: (%f, %f); Yaw: %f", Odom_pos.x(), Odom_pos.y(), Odom_yaw);
 
-    //display on terminal screen
-    //ROS_INFO("Position: (%f, %f); Yaw: %f", Odom_pos.x(), Odom_pos.y(), Odom_yaw);
-}
-
-
+    }
 /*
  * display function that draws a circular lane in Rviz, with function  (x+0.5)^2 + (y-1)^2 = 4^2 
  */
@@ -79,7 +82,7 @@ void displayLane(bool isTrajectoryPushed, Geometry &geometry) {
     path.color.a = 1.0;
 
     path.scale.x = 0.02;
-    path.pose.orientation.w = 1.0;
+    // path.pose.orientation.w = 1.0;
 
     std::string Confirm;
     int NumVec = 0;
@@ -136,13 +139,14 @@ int main(int argc, char **argv) {
 
     ros::init(argc, argv, "control");
     ros::NodeHandle n("~");
-    tf::TransformListener m_listener;
+    tf::TransformListener m_listener; 
     tf::StampedTransform transform;
 
     cmd_vel_pub = n.advertise<geometry_msgs::Twist>("/mobile_base/commands/velocity", 1);
     marker_pub = n.advertise<visualization_msgs::Marker>("visualization_marker", 1);
 
-    odom_sub = n.subscribe("odom", 10, odomCallback);
+    odom_sub = n.subscribe("/amcl_pose", 10, odomCallback);
+    odom_subT = n.subscribe("odom", 10, odomTCallback);
 
     ros::Rate loop_rate(10); // ros spins 10 frames per second
 
@@ -168,11 +172,9 @@ int main(int argc, char **argv) {
         //ROS_INFO("frame %d", frame_count);
 
 /*
-
 YOUR CONTROL STRETEGY HERE
 you need to define vehicle dynamics first (dubins car model)
 after you computed your control input (here angular speed) w, pass w value to "tw_msg.angular.z" below
-
 */
 
         double omega = 0.0;
@@ -274,8 +276,8 @@ after you computed your control input (here angular speed) w, pass w value to "t
 
         //ROS_INFO("Nearest %f,%f, dist %f ,ShortestDistanceVecAngle %f, Odom_yaw %f, Error: %f , omega: %f", linesegment->startP.x,linesegment->startP.y, linesegment->disatanceToAObj,angleError,Odom_yaw,angleError,omega);
 
-        ROS_INFO("Odom_yaw %f, Angle Error: %f , omega: %f Speed %f, Speed Error: %f , speedSet: %f", Odom_yaw,
-                 angleError, omega, Odom_v, speedError, speed);
+        // ROS_INFO("Odom_yaw %f, Angle Error: %f , omega: %f Speed %f, Speed Error: %f , speedSet: %f", Odom_yaw,
+        //          angleError, omega, Odom_v, speedError, speed);
 
 
         //for linear speed, we only use the first component of 3D linear velocity "linear.x" to represent the speed "v"
@@ -303,5 +305,3 @@ after you computed your control input (here angular speed) w, pass w value to "t
 double getDistance(Point &p1, Point &p2) {
     return sqrt(pow((p1.x - p2.x), 2) + pow((p1.y - p2.y), 2));
 }
-
-

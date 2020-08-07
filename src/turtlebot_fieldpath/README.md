@@ -9,3 +9,9 @@ GIT FOR THE TURTLEBOT 2 : https://github.com/gaunthan/Turtlebot2-On-Melodic
       $ source devel/setup.bash
    - run 
       $ roslaunch turtlebot_fieldpath turtle_arena.launch
+
+
+      $ roslaunch turtlebot_gazebo amcl_demo.launch map_file:=FILE_DIRECTORY/turtlebot_control_pack/src/turtlebot_fieldpath/map_field3/map_entregavel3.yaml
+
+      PS: This last command line is for load the map with amcl program.
+

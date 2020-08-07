@@ -1,0 +1,51 @@
+rosmsg show geometry_msgs/PoseWithCovarianceStamped 
+std_msgs/Header header
+  uint32 seq
+  time stamp
+  string frame_id
+geometry_msgs/PoseWithCovariance pose
+  geometry_msgs/Pose pose
+    geometry_msgs/Point position
+      float64 x
+      float64 y
+      float64 z
+    geometry_msgs/Quaternion orientation
+      float64 x
+      float64 y
+      float64 z
+      float64 w
+  float64[36] covariance
+
+jorge@jorge-Aspire-E5-573G:~/catkin_ws/src$ rosmsg show nav_msgs/
+nav_msgs/GetMapAction          nav_msgs/GetMapActionResult    nav_msgs/GetMapResult          nav_msgs/OccupancyGrid
+nav_msgs/GetMapActionFeedback  nav_msgs/GetMapFeedback        nav_msgs/GridCells             nav_msgs/Odometry
+nav_msgs/GetMapActionGoal      nav_msgs/GetMapGoal            nav_msgs/MapMetaData           nav_msgs/Path
+jorge@jorge-Aspire-E5-573G:~/catkin_ws/src$ rosmsg show nav_msgs/Odometry 
+std_msgs/Header header
+  uint32 seq
+  time stamp
+  string frame_id
+string child_frame_id
+geometry_msgs/PoseWithCovariance pose
+  geometry_msgs/Pose pose
+    geometry_msgs/Point position
+      float64 x
+      float64 y
+      float64 z
+    geometry_msgs/Quaternion orientation
+      float64 x
+      float64 y
+      float64 z
+      float64 w
+  float64[36] covariance
+geometry_msgs/TwistWithCovariance twist
+  geometry_msgs/Twist twist
+    geometry_msgs/Vector3 linear
+      float64 x
+      float64 y
+      float64 z
+    geometry_msgs/Vector3 angular
+      float64 x
+      float64 y
+      float64 z
+  float64[36] covariance

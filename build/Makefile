@@ -960,19 +960,6 @@ tf_generate_messages_nodejs/fast:
 	$(MAKE) -f pid_controller/CMakeFiles/tf_generate_messages_nodejs.dir/build.make pid_controller/CMakeFiles/tf_generate_messages_nodejs.dir/build
 .PHONY : tf_generate_messages_nodejs/fast
 
-#=============================================================================
-# Target rules for targets named tb3_control_node
-
-# Build rule for target.
-tb3_control_node: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 tb3_control_node
-.PHONY : tb3_control_node
-
-# fast build rule for target.
-tb3_control_node/fast:
-	$(MAKE) -f ROS-TurtleBot-PID/CMakeFiles/tb3_control_node.dir/build.make ROS-TurtleBot-PID/CMakeFiles/tb3_control_node.dir/build
-.PHONY : tb3_control_node/fast
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -1047,7 +1034,6 @@ help:
 	@echo "... rosgraph_msgs_generate_messages_cpp"
 	@echo "... rosgraph_msgs_generate_messages_lisp"
 	@echo "... tf_generate_messages_nodejs"
-	@echo "... tb3_control_node"
 .PHONY : help
 
 

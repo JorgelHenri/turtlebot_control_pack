@@ -1,2 +1,2 @@
-ROS-TurtleBot-PID:pid_controller:turtlebot_fieldpath
+pid_controller:turtlebot_fieldpath
 -DCATKIN_DEVEL_PREFIX=/home/jorge/Documents/robotica_tiago/turtlebot_control_pack/devel -DCMAKE_INSTALL_PREFIX=/home/jorge/Documents/robotica_tiago/turtlebot_control_pack/install -G Unix Makefiles

@@ -7,4 +7,3 @@
 subdirs("gtest")
 subdirs("turtlebot_fieldpath")
 subdirs("pid_controller")
-subdirs("ROS-TurtleBot-PID")

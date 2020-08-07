@@ -2160,61 +2160,6 @@ clean: pid_controller/CMakeFiles/tf_generate_messages_nodejs.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Directory level rules for directory ROS-TurtleBot-PID
-
-# Convenience name for "all" pass in the directory.
-ROS-TurtleBot-PID/all: ROS-TurtleBot-PID/CMakeFiles/tb3_control_node.dir/all
-
-.PHONY : ROS-TurtleBot-PID/all
-
-# Convenience name for "clean" pass in the directory.
-ROS-TurtleBot-PID/clean: ROS-TurtleBot-PID/CMakeFiles/tb3_control_node.dir/clean
-
-.PHONY : ROS-TurtleBot-PID/clean
-
-# Convenience name for "preinstall" pass in the directory.
-ROS-TurtleBot-PID/preinstall:
-
-.PHONY : ROS-TurtleBot-PID/preinstall
-
-#=============================================================================
-# Target rules for target ROS-TurtleBot-PID/CMakeFiles/tb3_control_node.dir
-
-# All Build rule for target.
-ROS-TurtleBot-PID/CMakeFiles/tb3_control_node.dir/all:
-	$(MAKE) -f ROS-TurtleBot-PID/CMakeFiles/tb3_control_node.dir/build.make ROS-TurtleBot-PID/CMakeFiles/tb3_control_node.dir/depend
-	$(MAKE) -f ROS-TurtleBot-PID/CMakeFiles/tb3_control_node.dir/build.make ROS-TurtleBot-PID/CMakeFiles/tb3_control_node.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jorge/Documents/robotica_tiago/turtlebot_control_pack/build/CMakeFiles --progress-num=17,18,19,20,21 "Built target tb3_control_node"
-.PHONY : ROS-TurtleBot-PID/CMakeFiles/tb3_control_node.dir/all
-
-# Include target in all.
-all: ROS-TurtleBot-PID/CMakeFiles/tb3_control_node.dir/all
-
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-ROS-TurtleBot-PID/CMakeFiles/tb3_control_node.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jorge/Documents/robotica_tiago/turtlebot_control_pack/build/CMakeFiles 5
-	$(MAKE) -f CMakeFiles/Makefile2 ROS-TurtleBot-PID/CMakeFiles/tb3_control_node.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jorge/Documents/robotica_tiago/turtlebot_control_pack/build/CMakeFiles 0
-.PHONY : ROS-TurtleBot-PID/CMakeFiles/tb3_control_node.dir/rule
-
-# Convenience name for target.
-tb3_control_node: ROS-TurtleBot-PID/CMakeFiles/tb3_control_node.dir/rule
-
-.PHONY : tb3_control_node
-
-# clean rule for target.
-ROS-TurtleBot-PID/CMakeFiles/tb3_control_node.dir/clean:
-	$(MAKE) -f ROS-TurtleBot-PID/CMakeFiles/tb3_control_node.dir/build.make ROS-TurtleBot-PID/CMakeFiles/tb3_control_node.dir/clean
-.PHONY : ROS-TurtleBot-PID/CMakeFiles/tb3_control_node.dir/clean
-
-# clean rule for target.
-clean: ROS-TurtleBot-PID/CMakeFiles/tb3_control_node.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
 # Special targets to cleanup operation of make.
 
 # Special rule to run CMake to check the build system integrity.

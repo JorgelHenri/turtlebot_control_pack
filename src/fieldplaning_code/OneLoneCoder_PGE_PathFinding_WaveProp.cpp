@@ -142,8 +142,8 @@ public:
 		auto p = [&](int x, int y) { return y * nMapWidth + x;  };
 		// Determinate the matriz file and aplying a class
 		readM Matrix("OG.txt");
-		nBorderWidth = 4;
-		nCellSize = 32;
+		nBorderWidth = 0;
+		nCellSize = 1;
 		nMapWidth = ScreenWidth() / nCellSize;
 		nMapHeight = ScreenHeight() / nCellSize;
 		bObstacleMap = new bool[nMapWidth * nMapHeight]{ false };
@@ -151,10 +151,10 @@ public:
 		fFlowFieldX = new float[nMapWidth * nMapHeight]{ 0 };
 		fFlowFieldY = new float[nMapWidth * nMapHeight]{ 0 };
 
-		nStartX = 2;
-		nStartY = 2;
-		nEndX = 8;
-		nEndY = 11;
+		nStartX = 0;
+		nStartY = 0;
+		nEndX = 1000;
+		nEndY = 600;
 		// for function to convert the matriz to obstacle
 		for (int i = 0; i < Matrix.M.size() ; i++ )
 		{
@@ -370,10 +370,10 @@ public:
 		{
 			for (int y = 0; y < nMapHeight; y++)
 			{
-				olc::Pixel colour = olc::BLUE;
+				olc::Pixel colour = olc::WHITE;
 
 				if (bObstacleMap[p(x, y)])
-					colour = olc::GREY;
+					colour = olc::BLACK;
 
 				if (nWave == nFlowFieldZ[p(x, y)])
 					colour = olc::DARK_CYAN;
@@ -406,9 +406,9 @@ public:
 					ax[3] = cosf(fAngle - 0.1f) * fRadius * 0.7f + fOffsetX;
 					ay[3] = sinf(fAngle - 0.1f) * fRadius * 0.7f + fOffsetY;
 
-					DrawLine(ax[0], ay[0], ax[1], ay[1], olc::CYAN);
-					DrawLine(ax[0], ay[0], ax[2], ay[2], olc::CYAN);
-					DrawLine(ax[0], ay[0], ax[3], ay[3], olc::CYAN);
+					// DrawLine(ax[0], ay[0], ax[1], ay[1], olc::CYAN);
+					// DrawLine(ax[0], ay[0], ax[2], ay[2], olc::CYAN);
+					// DrawLine(ax[0], ay[0], ax[3], ay[3], olc::CYAN);
 
 				}
 			}
@@ -449,7 +449,7 @@ public:
 int main()
 {
 	PathFinding_FlowFields demo;
-	if (demo.Construct(512, 480, 2, 2))
+	if (demo.Construct(1200, 900, 1, 1))
 		demo.Start();
 	return 0;
 }

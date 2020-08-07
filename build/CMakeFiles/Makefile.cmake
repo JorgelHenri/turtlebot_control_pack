@@ -10,8 +10,6 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.10.2/CMakeCCompiler.cmake"
   "CMakeFiles/3.10.2/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.10.2/CMakeSystem.cmake"
-  "ROS-TurtleBot-PID/catkin_generated/ordered_paths.cmake"
-  "ROS-TurtleBot-PID/catkin_generated/package.cmake"
   "catkin/catkin_generated/version/package.cmake"
   "catkin_generated/installspace/_setup_util.py"
   "catkin_generated/order_packages.cmake"
@@ -19,8 +17,6 @@ set(CMAKE_MAKEFILE_DEPENDS
   "pid_controller/catkin_generated/package.cmake"
   "turtlebot_fieldpath/catkin_generated/package.cmake"
   "/home/jorge/Documents/robotica_tiago/turtlebot_control_pack/src/CMakeLists.txt"
-  "/home/jorge/Documents/robotica_tiago/turtlebot_control_pack/src/ROS-TurtleBot-PID/CMakeLists.txt"
-  "/home/jorge/Documents/robotica_tiago/turtlebot_control_pack/src/ROS-TurtleBot-PID/package.xml"
   "/home/jorge/Documents/robotica_tiago/turtlebot_control_pack/src/pid_controller/CMakeLists.txt"
   "/home/jorge/Documents/robotica_tiago/turtlebot_control_pack/src/pid_controller/package.xml"
   "/home/jorge/Documents/robotica_tiago/turtlebot_control_pack/src/turtlebot_fieldpath/CMakeLists.txt"
@@ -235,7 +231,6 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "gtest/googlemock/gtest/CMakeFiles/CMakeDirectoryInformation.cmake"
   "turtlebot_fieldpath/CMakeFiles/CMakeDirectoryInformation.cmake"
   "pid_controller/CMakeFiles/CMakeDirectoryInformation.cmake"
-  "ROS-TurtleBot-PID/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
@@ -301,5 +296,4 @@ set(CMAKE_DEPEND_INFO_FILES
   "pid_controller/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/DependInfo.cmake"
   "pid_controller/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/DependInfo.cmake"
   "pid_controller/CMakeFiles/tf_generate_messages_nodejs.dir/DependInfo.cmake"
-  "ROS-TurtleBot-PID/CMakeFiles/tb3_control_node.dir/DependInfo.cmake"
   )

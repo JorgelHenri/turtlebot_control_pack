@@ -37,6 +37,7 @@ pid_controller/CMakeFiles/pid_controller2_node.dir/src/control.cpp.o: /opt/ros/m
 pid_controller/CMakeFiles/pid_controller2_node.dir/src/control.cpp.o: /opt/ros/melodic/include/geometry_msgs/Pose.h
 pid_controller/CMakeFiles/pid_controller2_node.dir/src/control.cpp.o: /opt/ros/melodic/include/geometry_msgs/PoseStamped.h
 pid_controller/CMakeFiles/pid_controller2_node.dir/src/control.cpp.o: /opt/ros/melodic/include/geometry_msgs/PoseWithCovariance.h
+pid_controller/CMakeFiles/pid_controller2_node.dir/src/control.cpp.o: /opt/ros/melodic/include/geometry_msgs/PoseWithCovarianceStamped.h
 pid_controller/CMakeFiles/pid_controller2_node.dir/src/control.cpp.o: /opt/ros/melodic/include/geometry_msgs/Quaternion.h
 pid_controller/CMakeFiles/pid_controller2_node.dir/src/control.cpp.o: /opt/ros/melodic/include/geometry_msgs/QuaternionStamped.h
 pid_controller/CMakeFiles/pid_controller2_node.dir/src/control.cpp.o: /opt/ros/melodic/include/geometry_msgs/Transform.h
@@ -44,6 +45,7 @@ pid_controller/CMakeFiles/pid_controller2_node.dir/src/control.cpp.o: /opt/ros/m
 pid_controller/CMakeFiles/pid_controller2_node.dir/src/control.cpp.o: /opt/ros/melodic/include/geometry_msgs/Twist.h
 pid_controller/CMakeFiles/pid_controller2_node.dir/src/control.cpp.o: /opt/ros/melodic/include/geometry_msgs/TwistStamped.h
 pid_controller/CMakeFiles/pid_controller2_node.dir/src/control.cpp.o: /opt/ros/melodic/include/geometry_msgs/TwistWithCovariance.h
+pid_controller/CMakeFiles/pid_controller2_node.dir/src/control.cpp.o: /opt/ros/melodic/include/geometry_msgs/TwistWithCovarianceStamped.h
 pid_controller/CMakeFiles/pid_controller2_node.dir/src/control.cpp.o: /opt/ros/melodic/include/geometry_msgs/Vector3.h
 pid_controller/CMakeFiles/pid_controller2_node.dir/src/control.cpp.o: /opt/ros/melodic/include/geometry_msgs/Vector3Stamped.h
 pid_controller/CMakeFiles/pid_controller2_node.dir/src/control.cpp.o: /opt/ros/melodic/include/nav_msgs/Odometry.h

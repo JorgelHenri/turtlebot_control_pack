@@ -101,11 +101,3 @@
 /home/jorge/Documents/robotica_tiago/turtlebot_control_pack/build/pid_controller/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir
 /home/jorge/Documents/robotica_tiago/turtlebot_control_pack/build/pid_controller/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir
 /home/jorge/Documents/robotica_tiago/turtlebot_control_pack/build/pid_controller/CMakeFiles/tf_generate_messages_nodejs.dir
-/home/jorge/Documents/robotica_tiago/turtlebot_control_pack/build/ROS-TurtleBot-PID/CMakeFiles/install/strip.dir
-/home/jorge/Documents/robotica_tiago/turtlebot_control_pack/build/ROS-TurtleBot-PID/CMakeFiles/install/local.dir
-/home/jorge/Documents/robotica_tiago/turtlebot_control_pack/build/ROS-TurtleBot-PID/CMakeFiles/test.dir
-/home/jorge/Documents/robotica_tiago/turtlebot_control_pack/build/ROS-TurtleBot-PID/CMakeFiles/list_install_components.dir
-/home/jorge/Documents/robotica_tiago/turtlebot_control_pack/build/ROS-TurtleBot-PID/CMakeFiles/tb3_control_node.dir
-/home/jorge/Documents/robotica_tiago/turtlebot_control_pack/build/ROS-TurtleBot-PID/CMakeFiles/install.dir
-/home/jorge/Documents/robotica_tiago/turtlebot_control_pack/build/ROS-TurtleBot-PID/CMakeFiles/edit_cache.dir
-/home/jorge/Documents/robotica_tiago/turtlebot_control_pack/build/ROS-TurtleBot-PID/CMakeFiles/rebuild_cache.dir
